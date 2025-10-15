@@ -32,6 +32,9 @@ PRODUCT_PACKAGES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
+PRODUCT_PACKAGES += \
+    SettingsOverlayRhode
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml \
@@ -56,3 +59,6 @@ PRODUCT_COPY_FILES += \
 
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/motorola/rhode/rhode-vendor.mk)
+
+# Board Platform
+TARGET_BOARD_PLATFORM := bengal
